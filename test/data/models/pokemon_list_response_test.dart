@@ -47,7 +47,7 @@ void main() {
   group('fromJson', () {
     test('should return PokemonListResponse model from JSON with non null value', () {
       // arrange
-      final jsonMap = json.decode(readJson('data/dummy/pokemon_list.json'));
+      final jsonMap = json.decode(readJson('data/dummy/pokemon_list_response/pokemon_list.json'));
       // act
       final result = PokemonListResponse.fromJson(jsonMap);
       // assert
@@ -57,7 +57,7 @@ void main() {
 
     test('should return PokemonListResponse model from JSON with null value', () {
       // arrange
-      final jsonMap = json.decode(readJson('data/dummy/pokemon_list_negative_1.json'));
+      final jsonMap = json.decode(readJson('data/dummy/pokemon_list_response/pokemon_list_negative_1.json'));
       // act
       final result = PokemonListResponse.fromJson(jsonMap);
       // assert
@@ -67,7 +67,7 @@ void main() {
 
     test('should return PokemonListResponse model from JSON with each Result Pokemon has null value', () {
       // arrange
-      final jsonMap = json.decode(readJson('data/dummy/pokemon_list_negative_2.json'));
+      final jsonMap = json.decode(readJson('data/dummy/pokemon_list_response/pokemon_list_negative_2.json'));
       // act
       final result = PokemonListResponse.fromJson(jsonMap);
       // assert
